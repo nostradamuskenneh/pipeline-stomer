@@ -1,34 +1,34 @@
 pipeline {
     agent any
     stages {
-        stage('Go-Test') {
-	 agent {
-            docker {
+    //     stage('Go-Test') {
+	//  agent {
+    //         docker {
 
-              image 'maven:latest'
-            }
-           }
-            steps {
-                sh '''
-                ls 
-                pwd
-                '''
-            }
-        }
-        stage('Java-Test') {
-	 agent {
-            docker {
+    //           image 'maven:latest'
+    //         }
+    //        }
+    //         steps {
+    //             sh '''
+    //             ls 
+    //             pwd
+    //             '''
+    //         }
+    //     }
+    //     stage('Java-Test') {
+	//  agent {
+    //         docker {
 
-              image 'maven:latest'
-            }
-           }
-            steps {
-                sh '''
-                ls 
-                pwd
-                '''
-            }
-        }
+    //           image 'maven:latest'
+    //         }
+    //        }
+    //         steps {
+    //             sh '''
+    //             ls 
+    //             pwd
+    //             '''
+    //         }
+    //     }
          stage('SonarQube analysis') {
             agent {
                 docker {
